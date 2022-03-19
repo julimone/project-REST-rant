@@ -14,6 +14,7 @@ app.use(methodOverride('_method'))
 
 //Controllers $ Routes
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'))
 app.use('/places', require('./controllers/places'))
 
 
