@@ -1,9 +1,13 @@
 const React = require('react')
-const Def = require('../default.jsx')
+const Def = require('./default.jsx')
 
 function edit_form(data) {
     return (
         <Def>
+            <head>
+                <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css' />
+                <link rel="stylesheet" href="/css/styles.css" />
+            </head>
             <main>
                 <h1>Edit Place</h1>
                 <form method="POST" action={`/places/${data.id}?_method=PUT`}>
