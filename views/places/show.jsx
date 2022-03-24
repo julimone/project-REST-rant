@@ -6,25 +6,39 @@ function show(data) {
     return (
         <Def>
             <main>
-                <h1>{data.place.name}</h1>
-
-                <div>
+                <div className='row'>
+                    <div className='col-sm-6' />
+                    <img src={data.olace.pic} alt={data.place.name} />
+                    <h1>{data.place.name}</h1>
+                </div>
+                <div className='row'>
+                    <div className='col-sm-6' />
                     <h1>Rating</h1>
                     <p>
                         Not rated
                     </p>
                 </div>
-                <div>
+                <div className='row'>
+                    <div className='col-sm-6' />
                     <h1>Description</h1>
                     <p>
 
                     </p>
                 </div>
                 <hr />
-                <div>
+                <div className='row'>
+                    <div className='col-sm-6' />
                     <h1>Comments</h1>
                     <p>No comments yet</p>
-
+                </div>
+                <div className='row'>
+                    <div className='col-sm-6' />
+                    <h3>
+                        {data.place.showEstablished()}
+                    </h3>
+                    <h4>
+                        Serving {data.place.cuisines}
+                    </h4>
                 </div>
                 <div>
                     <a href={`/places/${data.id}/edit`} className="btn btn-warning">
