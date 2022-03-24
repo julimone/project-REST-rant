@@ -3,9 +3,21 @@ const React = require('react')
 const Def = require('../default')
 
 function show(data) {
+    let message = ''
+
+    if (data.message) {
+        message
+            (
+                <h4 className="alert-danger">
+                    {data.message}
+                </h4>
+            )
+    }
     return (
         <Def>
             <main>
+                <h1>Add a New Place</h1>
+                {message}
                 <div className='row'>
                     <div className='col-sm-6' />
                     <img src={data.olace.pic} alt={data.place.name} />
@@ -54,6 +66,5 @@ function show(data) {
         </Def>
     )
 }
-// rating
 
 module.exports = show
